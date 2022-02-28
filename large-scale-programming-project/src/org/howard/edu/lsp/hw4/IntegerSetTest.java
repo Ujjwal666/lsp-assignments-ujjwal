@@ -10,8 +10,8 @@ import org.howard.edu.lsp.hw4.*;
 public class IntegerSetTest {
 	/**
 	 * 
-	 * @param args
-	 * @throws IntegerSetException
+	 * @param args N/A
+	 * @throws IntegerSetException if set is empty
 	 */
 	public static void main(String[] args) throws IntegerSetException {
 		//initializes the set1

@@ -10,13 +10,18 @@ import java.util.*;
 class IntegerSetException extends Exception{
 	
 }
- 
+/**
+ * 
+ * @author ujjwaladhikari
+ *
+ */
 public class IntegerSet {
 	// Hint: probably best to use an array list.  You will need to do a little research
 	private List<Integer> set= new ArrayList<Integer>();
 	
-	// Default Constructor
-	
+	/**
+	 * Default Constructor
+	 */
 	public IntegerSet(){
 		
 	};
@@ -28,7 +33,7 @@ public class IntegerSet {
 	};
 	/**
 	 * Returns the length of the set
-	 * @return
+	 * @return length
 	 */
 	public int length() {
 		return set.size();
@@ -36,8 +41,8 @@ public class IntegerSet {
 	/**
 	 * Returns true if the 2 sets are equal, false otherwise;
 	 * Two sets are equal if they contain all of the same values in ANY order.
-	 * @param b
-	 * @return
+	 * @param b different set
+	 * @return true if both sets are equal else false
 	 */
 	public boolean equals(IntegerSet b) {
 		ArrayList<Integer> a=(ArrayList<Integer>) b.set;
@@ -54,16 +59,16 @@ public class IntegerSet {
 	};
 	/**
 	 * Returns true if the set contains the value, otherwise false
-	 * @param value
-	 * @return
+	 * @param value to check if present in set
+	 * @return true if present else false
 	 */
 	public boolean contains(int value) {
 		return set.contains(value);
 	};
 	/**
 	 * Returns the largest item in the set; Throws a IntegerSetException if the set is empty
-	 * @return
-	 * @throws IntegerSetException
+	 * @return largest item in set
+	 * @throws IntegerSetException if set is empty
 	 */
 	public int largest() throws IntegerSetException{
 		if (length() == 0) {
@@ -80,8 +85,8 @@ public class IntegerSet {
 	};
 	/**
 	 * Returns the smallest item in the set; Throws a IntegerSetException if the set is empty
-	 * @return
-	 * @throws IntegerSetException
+	 * @return smallest item in the set
+	 * @throws IntegerSetException if set is empty
 	 */
 	public int smallest() throws IntegerSetException{
 		if (length() == 0) {
@@ -98,7 +103,7 @@ public class IntegerSet {
 	};
 	/**
 	 * Adds an item to the set or does nothing it already there
-	 * @param item
+	 * @param item value that is sent to be added in the set
 	 */
 	public void add(int item) {
 		if (set.contains(item)) {
@@ -110,8 +115,8 @@ public class IntegerSet {
 	};
 	/**
 	 * Removes an item from the set or does nothing if not there and throws  a IntegerSetException error if set is empty
-	 * @param item
-	 * @throws IntegerSetException
+	 * @param item value that is sent to be removed in the set
+	 * @throws IntegerSetException if set is empty
 	 */
 	public void remove(int item) throws IntegerSetException{
 		if (length() == 0) {
@@ -124,7 +129,7 @@ public class IntegerSet {
 	};
 	/**
 	 * unions two set (Set Union)
-	 * @param intSetb
+	 * @param intSetb another set to find union
 	 */
 	public void union(IntegerSet intSetb) {
 		ArrayList<Integer> b=(ArrayList<Integer>) intSetb.set;
@@ -137,7 +142,7 @@ public class IntegerSet {
 	};
 	/**
 	 * intersects two set
-	 * @param intSetb
+	 * @param intSetb another set to find intersect
 	 */
 	public void intersect(IntegerSet intSetb) {
 		ArrayList<Integer> b=(ArrayList<Integer>) intSetb.set;
@@ -145,7 +150,7 @@ public class IntegerSet {
 	};
 	/**
 	 * difference of two set
-	 * @param intSetb
+	 * @param intSetb another set to find difference
 	 */
 	public void diff(IntegerSet intSetb) {
 		ArrayList<Integer> b=(ArrayList<Integer>) intSetb.set;
@@ -153,13 +158,14 @@ public class IntegerSet {
 	};
 	/**
 	 * Returns true if the set is empty, false otherwise
-	 * @return
+	 * @return true if set is empty else false
 	 */
 	public boolean isEmpty() {
 		return set.isEmpty();
 	};
 	/**
 	 * Return String representation of your set
+	 * @return String representation of your set
 	 */
 	public String toString() {
 		String setString = "";
