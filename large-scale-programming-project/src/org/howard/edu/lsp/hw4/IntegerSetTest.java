@@ -50,9 +50,19 @@ public class IntegerSetTest {
 		System.out.println(set1.isEmpty());
 		
 		//Throws the IntegerSetException
-		//System.out.println(set1.largest());
+		try {
+			IntegerSet a = new IntegerSet();
+			a.largest();
+		}catch (IntegerSetException e){
+			System.out.println(e.getMessage());
+		}
 		//Throws the IntegerSetException
-		//System.out.println(set1.smallest());
+		try {
+			IntegerSet a = new IntegerSet();
+			a.smallest();
+		}catch (IntegerSetException e){
+			System.out.println(e.getMessage());
+		}
 
 		//adds 6 to set1
 		set1.add(6);
@@ -71,7 +81,12 @@ public class IntegerSetTest {
 		//clears set1
 		set1.clear();
 //		throws error as the set is empty.
-//		set1.remove(6);
+		try {
+			IntegerSet a = new IntegerSet();
+			a.remove(6);
+		}catch (IntegerSetException e){
+			System.out.println(e.getMessage());
+		}
 		System.out.println("Value of Set1 is:"+set1.toString());
 		//adds value in set1
 		set1.add(4);

@@ -1,15 +1,7 @@
 package org.howard.edu.lsp.hw4;
 
 import java.util.*;
-/**
- * 
- * Handles the error exception in IntegerSet class
- * @author ujjwaladhikari
- *
- */
-class IntegerSetException extends Exception{
-	
-}
+
 /**
  * 
  * @author ujjwaladhikari
@@ -67,22 +59,21 @@ public class IntegerSet {
 	};
 	/**
 	 * Returns the largest item in the set; Throws a IntegerSetException if the set is empty
-	 * @return largest item in set
+	 * @return largest item in the set
 	 * @throws IntegerSetException if set is empty
 	 */
 	public int largest() throws IntegerSetException{
 		if (length() == 0) {
-			IntegerSetException e = new IntegerSetException();
-			throw e;
-		};
+			throw new IntegerSetException();
+		}
 		int max_value = 0;
 		for (int i = 0; i < length(); i++) {
 			if (set.get(i) > max_value) {
 				max_value = set.get(i);
 			};
-		};
+		}
 		return max_value;
-	};
+	}
 	/**
 	 * Returns the smallest item in the set; Throws a IntegerSetException if the set is empty
 	 * @return smallest item in the set
@@ -90,8 +81,7 @@ public class IntegerSet {
 	 */
 	public int smallest() throws IntegerSetException{
 		if (length() == 0) {
-			IntegerSetException e = new IntegerSetException();
-			throw e;
+			throw new IntegerSetException();
 		};
 		int min_value = set.get(0);
 		for (int i = 1; i < length(); i++) {
@@ -120,8 +110,7 @@ public class IntegerSet {
 	 */
 	public void remove(int item) throws IntegerSetException{
 		if (length() == 0) {
-			IntegerSetException e = new IntegerSetException();
-			throw e;
+			throw new IntegerSetException();
 		};
 		if ((length() > 0) & (set.contains(item))){
 			set.remove(Integer.valueOf(item));
