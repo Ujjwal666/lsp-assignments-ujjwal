@@ -97,7 +97,7 @@ public class IntegerSet {
 		return min_value;
 	};
 	/**
-	 * Adds an item to the set or does nothing it already there
+	 * Adds item to the set or does nothing it already there
 	 * @param item value that is sent to be added in the set
 	 */
 	public void add(int item) {
